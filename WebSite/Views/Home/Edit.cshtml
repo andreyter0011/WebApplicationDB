@@ -1,0 +1,43 @@
+﻿@model WebSite.Models.Teacher
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<h2>Изменение преподователя</h2>
+ 
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Преподователь</legend>
+ 
+        @Html.HiddenFor(model => model.Id)
+ 
+        <p> Имя <br />
+            @Html.EditorFor(model => model.Name)
+        </p>
+ 
+        <p>Должность <br />
+        @Html.EditorFor(model => model.Post)
+        </p>
+ 
+        <p>Ученая степень  <br />
+            @Html.EditorFor(model => model.Degree)
+        </p>
+         <p>Ученое звание  <br />
+            @Html.EditorFor(model => model.Title)
+        </p>
+         <p>Стаж работы  <br />
+            @Html.EditorFor(model => model.Exp)
+        </p>
+        <p>Публикация <br />
+            @Html.DropDownListFor(model => model.MonographId, ViewBag.Monograph as SelectList)
+        </p>
+        <p>
+            <input type="submit" value="Сохранить" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Вернуться к списку", "Index")
+</div>

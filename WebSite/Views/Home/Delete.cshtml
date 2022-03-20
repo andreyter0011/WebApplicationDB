@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WebSite.Models.Teacher
+<h2>Удаление</h2>
+<dl>
+    <dt>Имя</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+ 
+    <dt>Должность</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Post)
+    </dd>
+ 
+    <dt>Ученая степень</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Degree)
+    </dd>
+
+     <dt>Ученое звание</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Title)
+    </dd>
+
+     <dt>Стаж работы</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Exp)
+    </dd>
+
+     <dt>Публикация</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Monograph.Name)
+    </dd>
+</dl>
+ 
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Удалить"  />
+}

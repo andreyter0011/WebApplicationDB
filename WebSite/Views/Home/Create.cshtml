@@ -1,0 +1,49 @@
+﻿@model WebSite.Models.Teacher
+ 
+@{
+    ViewBag.Title = "Добавление игрока";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<h2>Добавление Преподователя</h2>
+ 
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Преподователь</legend>
+ 
+        <p>
+            Имя <br />
+            @Html.EditorFor(model => model.Name)
+        </p>
+ 
+        <p>
+            Должность <br />
+            @Html.EditorFor(model => model.Post)
+        </p>
+ 
+        <p>
+            Учёная степень  <br />
+            @Html.EditorFor(model => model.Degree)
+        </p>
+         <p>
+            Учёное звание  <br />
+            @Html.EditorFor(model => model.Title)
+        </p>
+         <p>
+            Стаж работы  <br />
+            @Html.EditorFor(model => model.Exp)
+        </p>
+        <p>
+            Монография <br />
+            @Html.DropDownListFor(model => model.MonographId, ViewBag.Monograph as SelectList)
+        </p>
+ 
+        <p>
+            <input type="submit" value="Добавить" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("К списку", "Index")
+</div>
