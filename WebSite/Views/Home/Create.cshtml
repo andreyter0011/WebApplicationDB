@@ -35,10 +35,13 @@
             @Html.EditorFor(model => model.Exp)
         </p>
         <p>
-            Монография <br />
+            Публикация  <br />
+            @Html.EditorFor(model => model.Monograph.Name)
+        </p>
+        <p>
+            Издательство <br />
             @Html.DropDownListFor(model => model.MonographId, ViewBag.Monograph as SelectList)
         </p>
- 
         <p>
             <input type="submit" value="Добавить" />
         </p>

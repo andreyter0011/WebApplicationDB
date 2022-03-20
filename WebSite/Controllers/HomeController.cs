@@ -16,10 +16,18 @@ namespace WebSite.Controllers
     {
         MonographContext db = new MonographContext();
 
-        public ActionResult Index()
+        public async Task<IActionResult> Index(SortState sortOrder = SortState.PublishAsc)
         {
-            var teachers = db.Teachers.Include(p => p.Monograph);
-            return View(teachers.ToList());
+            IQueryable<Teacher> users = db.Teachers.Include(x => x.Monograph);
+
+            ViewData["PublishSort"] = sortOrder == SortState.PublishAsc ? SortState.PublishDesc : SortState.PublishAsc;
+
+            users = sortOrder switch
+            {
+                SortState.PublishDesc => users.OrderByDescending(s => s.Name),
+                _ => users.OrderBy(s => s.Name),
+            };
+            return View(await users.AsNoTracking().ToListAsync());
         }
         [HttpGet]
         public ActionResult Create()

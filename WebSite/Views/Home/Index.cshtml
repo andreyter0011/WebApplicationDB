@@ -15,6 +15,9 @@
         <th>Ученое звание</th>
         <th>Стаж работы</th>
         <th>Публикация</th>
+        <th> <a asp-action="Index" asp-route-sortOrder="@ViewBag.PublishSort">
+                Издания
+            </a></th>
         <th></th>
     </tr>
  
@@ -37,6 +40,9 @@
                 @Html.DisplayFor(modelItem => item.Exp)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Monograph.Name)
+            </td>
+             <td>
                 @Html.DisplayFor(modelItem => item.Monograph.Publish)
             </td>
             <td>
