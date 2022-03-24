@@ -1,0 +1,16 @@
+﻿@model IEnumerable<WebSite.Models.Monograph>
+
+@{
+    ViewBag.Title = "Выходные документы";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Выходные документы</h2>
+<p>
+    @Html.ActionLink("Список всех монографий", "AllPublish")
+    @Html.ActionLink("Список монографий определённого преподавателя", "TeacherPublish")
+     @Html.ActionLink("Список преподавателей, отсортированный по алфавиту", "AllTeacher")
+</p>
+ 
+<div>
+    @Html.ActionLink("К списку", "Index")
+</div>

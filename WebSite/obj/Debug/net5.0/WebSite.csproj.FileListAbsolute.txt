@@ -68,7 +68,10 @@ C:\Users\Andrey\Pet-Project\WebSite\WebSite\bin\Debug\net5.0\runtimes\win\lib\ne
 C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\WebSite.csproj.AssemblyReference.cache
 C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\Razor\Views\Home\Create.cshtml.g.cs
 C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\Razor\Views\Home\Monograph.cshtml.g.cs
-C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\Razor\Views\Home\CreateM.cshtml.g.cs
 C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs
 C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\Razor\Views\Home\Delete.cshtml.g.cs
-C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\Razor\Views\Shared\_Monograph.cshtml.g.cs
+C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\Razor\Views\Home\CreateM.cshtml.g.cs
+C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\Razor\Views\Home\InputDoc.cshtml.g.cs
+C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\Razor\Views\Home\AllPublish.cshtml.g.cs
+C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\Razor\Views\Home\TeacherPublish.cshtml.g.cs
+C:\Users\Andrey\Pet-Project\WebSite\WebSite\obj\Debug\net5.0\Razor\Views\Home\AllTeacher.cshtml.g.cs

@@ -8,40 +8,7 @@
 <p>
     @Html.ActionLink("Добавить монографию", "CreateM")
 </p>
- <table>
-     <tr>
-        <th>ID</th>
-        <th>Название</th>
-        <th>Издание</th>
-        <th>Год издания</th>
-        <th>Кол-во страниц</th>
-        <th></th>
-    </tr>
-    @if (Model != null)
-    {
-        foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Publish)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Year)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Count)
-                </td>
-                <td>
-                    @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
-                </td>
-            </tr>
-        }
-    }
-</table>
+ 
 <div>
     @Html.ActionLink("К списку", "Index")
 </div>

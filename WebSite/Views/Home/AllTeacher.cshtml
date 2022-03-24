@@ -1,0 +1,29 @@
+﻿@using WebSite.Models
+ 
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>Преподаватели</title>
+</head>
+<div>
+    <h3>Преподаватели</h3>
+    <table>
+        <tr>
+            <th><a asp-action="AllTeacher" asp-route-sortOrder="@ViewBag.NameSort">
+                ФИО преподавателя
+            </a></th>
+        </tr>
+        @foreach (WebSite.Models.Teacher p in Model)
+        {
+        <tr>
+            <td><p>@p.Name</p></td>
+        </tr>
+        }
+    </table>
+</div>
+<div>
+    @Html.ActionLink("К списку", "InputDoc")
+</div>

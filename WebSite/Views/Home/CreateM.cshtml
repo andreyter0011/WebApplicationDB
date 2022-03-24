@@ -1,11 +1,11 @@
 ﻿@model WebSite.Models.Monograph
  
 @{
-    ViewBag.Title = "Добавление монографии";
+    ViewBag.Title = "Добавление Монографии";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
  
-<h2>Добавление Монографии</h2>
+<h2>Добавление монографии</h2>
  
 @using (Html.BeginForm())
 {
@@ -13,7 +13,7 @@
         <legend>Монография</legend>
  
         <p>
-            Название <br />
+            Название публикации <br />
             @Html.EditorFor(model => model.Name)
         </p>
  
@@ -26,11 +26,10 @@
             Год издания  <br />
             @Html.EditorFor(model => model.Year)
         </p>
-        <p>
-            Кол-во страниц <br />
+         <p>
+            Кол-во страниц  <br />
             @Html.EditorFor(model => model.Count)
         </p>
- 
         <p>
             <input type="submit" value="Добавить" />
         </p>

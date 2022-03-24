@@ -1,23 +1,35 @@
 ﻿@model IEnumerable<WebSite.Models.Teacher>
 @{
-    ViewBag.Title = "Монография преподователей";
+    ViewBag.Title = "Монография преподавателей";
 }
  
-<h2>Монография преподователей</h2>
+<h2>Монография преподавателей</h2>
 <p>
-    @Html.ActionLink("Добавить преподователя", "Create")
+    @Html.ActionLink("Добавить преподавателя", "Create")
 </p>
+
+<form method="get">
+    <div class="form-inline form-group">
+        <label class="control-label">Имя: </label>
+        <input name="name" class="form-control" />
+ 
+        <input type="submit" value="Фильтр" class="btn btn-default" />
+    </div>
+</form>
+
 <table>
     <tr>
-        <th>Имя преподователя</th>
+        <th><a asp-action="Index" asp-route-sortOrder="@ViewBag.NameSort">
+                Имя преподавателя
+            </a></th>
         <th>Должность</th>
-        <th>Учёная степень</th>
+        <th>Ученая степень</th>
         <th>Ученое звание</th>
         <th>Стаж работы</th>
-        <th>Публикация</th>
-        <th> <a asp-action="Index" asp-route-sortOrder="@ViewBag.PublishSort">
-                Издания
-            </a></th>
+        <th>Название публикации</th>
+        <th>Год издания</th>
+        <th>Кол-во страниц</th>
+        <th>Издания</th>
         <th></th>
     </tr>
  
@@ -42,6 +54,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Monograph.Name)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monograph.Year)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.Monograph.Count)
+            </td>
              <td>
                 @Html.DisplayFor(modelItem => item.Monograph.Publish)
             </td>
@@ -52,6 +70,3 @@
         </tr>
     }
 </table>
-<p>
-    @Html.ActionLink("Каталог издательств", "ListTeams")
-</p>

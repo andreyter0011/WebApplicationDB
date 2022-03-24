@@ -9,7 +9,7 @@ namespace WebSite.Models
         public string Publish { get; set; }
         public int Year { get; set; }
         public int Count { get; set; }
-        public ICollection<Teacher> Teachers { get; set; }
+        public IEnumerable<Teacher> Teachers { get; set; }
         public Monograph()
         {
             Teachers = new List<Teacher>();

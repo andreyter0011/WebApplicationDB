@@ -1,0 +1,29 @@
+﻿@using WebSite.Models
+ 
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>Все публикации</title>
+</head>
+<div>
+    <h3>Все публикации</h3>
+    <table>
+        <tr>
+            <th>Название публикации</th>
+            <th>Издательство</th>
+        </tr>
+        @foreach (WebSite.Models.Monograph p in Model)
+        {
+        <tr>
+            <td><p>@p.Name</p></td>
+            <td><p>@p.Publish</p></td>
+        </tr>
+        }
+    </table>
+</div>
+<div>
+    @Html.ActionLink("К списку", "InputDoc")
+</div>

@@ -2,7 +2,7 @@
 {
     public enum SortState
     {
-        PublishAsc,    // по имени по возрастанию
-        PublishDesc,   // по имени по убыванию
+        NameAsc,    // по имени по возрастанию
+        NameDesc,   // по имени по убыванию
     }
 }

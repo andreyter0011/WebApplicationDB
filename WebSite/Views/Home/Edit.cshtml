@@ -4,12 +4,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
  
-<h2>Изменение преподователя</h2>
+<h2>Изменение преподавателя</h2>
  
 @using (Html.BeginForm())
 {
     <fieldset>
-        <legend>Преподователь</legend>
+        <legend>Преподаватель</legend>
  
         @Html.HiddenFor(model => model.Id)
  
@@ -30,8 +30,8 @@
          <p>Стаж работы  <br />
             @Html.EditorFor(model => model.Exp)
         </p>
-        <p>Публикация <br />
-            @Html.DropDownListFor(model => model.MonographId, ViewBag.Monograph as SelectList)
+        <p>Монография<br />
+            @Html.DropDownListFor(model => model.MonographId, ViewBag.MonographN as SelectList)
         </p>
         <p>
             <input type="submit" value="Сохранить" />

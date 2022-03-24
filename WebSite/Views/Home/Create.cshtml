@@ -1,19 +1,19 @@
 ﻿@model WebSite.Models.Teacher
  
 @{
-    ViewBag.Title = "Добавление игрока";
+    ViewBag.Title = "Добавление Преподавателя";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
  
-<h2>Добавление Преподователя</h2>
+<h2>Добавление Преподавателя</h2>
  
 @using (Html.BeginForm())
 {
     <fieldset>
-        <legend>Преподователь</legend>
+        <legend>Преподаватель</legend>
  
         <p>
-            Имя <br />
+            ФИО <br />
             @Html.EditorFor(model => model.Name)
         </p>
  
@@ -23,11 +23,11 @@
         </p>
  
         <p>
-            Учёная степень  <br />
+            Ученая степень  <br />
             @Html.EditorFor(model => model.Degree)
         </p>
          <p>
-            Учёное звание  <br />
+            Ученое звание  <br />
             @Html.EditorFor(model => model.Title)
         </p>
          <p>
@@ -35,13 +35,22 @@
             @Html.EditorFor(model => model.Exp)
         </p>
         <p>
-            Публикация  <br />
-            @Html.EditorFor(model => model.Monograph.Name)
+            Название публикации  <br />
+           @Html.DropDownListFor(model => model.MonographId, ViewBag.MonographN as SelectList)
+        </p>
+         <p>
+            Год издания  <br />
+           @Html.DropDownListFor(model => model.MonographId, ViewBag.MonographY as SelectList)
+        </p>
+        <p>
+            Количество страниц  <br />
+            @Html.DropDownListFor(model => model.MonographId, ViewBag.MonographC as SelectList)
         </p>
         <p>
             Издательство <br />
             @Html.DropDownListFor(model => model.MonographId, ViewBag.Monograph as SelectList)
         </p>
+
         <p>
             <input type="submit" value="Добавить" />
         </p>

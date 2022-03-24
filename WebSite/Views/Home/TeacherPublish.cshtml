@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebSite.Models.Teacher>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>Монография определённого преподавателя</title>
+</head>
+<div>
+    <h3>Монография определённого преподавателя</h3>
+    <form method="get">
+    <div class="form-inline form-group">
+        <label class="control-label">Имя: </label>
+        <input name="name" class="form-control" />
+ 
+        <input type="submit" value="Фильтр" class="btn btn-default" />
+    </div>
+</form>
+    <table>
+        <tr>
+            <th>ФИО преподавателя</th>
+            <th>Название публикации</th>
+            <th>Издательство</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+            <td>@Html.DisplayFor(modelItem => item.Monograph.Name)</td>
+            <td>@Html.DisplayFor(modelItem => item.Monograph.Publish)</td>
+        </tr>
+        }
+    </table>
+</div>
+<div>
+    @Html.ActionLink("К списку", "InputDoc")
+</div>
